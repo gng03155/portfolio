@@ -5,7 +5,7 @@
       <fieldset>
         <legend>PHOTOSHOP</legend>
         <div class="content">
-          <div class="view">
+          <div class="thumbnail">
             <img src="" alt="" />
             <span>미리보기</span>
           </div>
@@ -37,13 +37,47 @@
               </li>
               <li>
                 <h4>SKILL</h4>
-                <div class="skill">
-                  <span>React</span>
-                  <span>Next.js</span>
-                  <span>Typescript</span>
-                  <span>SWR</span>
-                  <span>StyledComponents</span>
-                  <span>FireBase</span>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="react"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="skill">
+                    <i class="nextjs"></i>
+                    <span>Next.js</span>
+                  </div>
+                  <div class="skill">
+                    <i class="ts"></i>
+                    <span>Typescript</span>
+                  </div>
+                  <div class="skill">
+                    <i class="swr"></i>
+                    <span>SWR</span>
+                  </div>
+                  <div class="skill">
+                    <i class="st"></i>
+                    <span>StyledComponents</span>
+                  </div>
+                  <div class="skill">
+                    <i class="fb"></i>
+                    <span>FireBase</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <h4>개발노트</h4>
+                <p>dddddddddd</p>
+              </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="view"></i>
+                    <span>VIEW</span>
+                  </a>
                 </div>
               </li>
             </ul>
@@ -53,7 +87,7 @@
       <fieldset>
         <legend>실시간 코인 조회</legend>
         <div class="content">
-          <div class="view">
+          <div class="thumbnail">
             <img src="" alt="" />
             <span>미리보기</span>
           </div>
@@ -80,11 +114,23 @@
               </li>
               <li>
                 <h4>SKILL</h4>
-                <div class="skill">
-                  <span>React</span>
-                  <span>Typescript</span>
-                  <span>websocket</span>
-                  <span>express</span>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="react"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="skill">
+                    <i class="redux"></i>
+                    <span>redux</span>
+                  </div>
+                  <div class="skill">
+                    <i class="ts"></i>
+                    <span>Typescript</span>
+                  </div>
+                  <div class="skill">
+                    <i class="socket"></i>
+                    <span>websocket</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -94,7 +140,7 @@
       <fieldset>
         <legend>리그 오브 레전드 전적조회</legend>
         <div class="content">
-          <div class="view">
+          <div class="thumbnail">
             <img src="" alt="" />
             <span>미리보기</span>
           </div>
@@ -118,12 +164,23 @@
               </li>
               <li>
                 <h4>SKILL</h4>
-                <div class="skill">
-                  <span>React</span>
-                  <span>Redux</span>
-                  <span>Typescript</span>
-                  <span>websocket</span>
-                  <span>express</span>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="react"></i>
+                    <span>React</span>
+                  </div>
+                  <div class="skill">
+                    <i class="ts"></i>
+                    <span>Typescript</span>
+                  </div>
+                  <div class="skill">
+                    <i class="pptr"></i>
+                    <span>puppeteer</span>
+                  </div>
+                  <div class="skill">
+                    <i class="express"></i>
+                    <span>express</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -133,7 +190,7 @@
       <fieldset>
         <legend>Interactive CSS Model</legend>
         <div class="content">
-          <div class="view">
+          <div class="thumbnail">
             <img src="" alt="" />
             <span>미리보기</span>
           </div>
@@ -152,9 +209,15 @@
               </li>
               <li>
                 <h4>SKILL</h4>
-                <div class="skill">
-                  <span>Javascript</span>
-                  <span>scss</span>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="js"></i>
+                    <span>js</span>
+                  </div>
+                  <div class="skill">
+                    <i class="scss"></i>
+                    <span>scss</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -164,7 +227,7 @@
       <fieldset>
         <legend>Break Out</legend>
         <div class="content">
-          <div class="view">
+          <div class="thumbnail">
             <img src="" alt="" />
             <span>미리보기</span>
           </div>
@@ -179,10 +242,16 @@
                 <p>벽돌부시기</p>
               </li>
               <li>
-                <h4>Skill</h4>
-                <div class="skill">
-                  <span>Javascript</span>
-                  <span>scss</span>
+                <h4>SKILL</h4>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="js"></i>
+                    <span>js</span>
+                  </div>
+                  <div class="skill">
+                    <i class="scss"></i>
+                    <span>scss</span>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -235,14 +304,14 @@ fieldset:nth-child(2n) legend {
   justify-content: space-around;
 }
 
-.view {
+.thumbnail {
   position: relative;
   width: 500px;
   height: 400px;
   border: 1px solid gold;
 }
 
-.view span {
+.thumbnail span {
   position: absolute;
   left: 15px;
   top: 15px;
@@ -269,11 +338,142 @@ fieldset:nth-child(2n) legend {
   font-size: 14px;
 }
 
-.info ul li .skill span {
-  display: inline-block;
-  padding: 4px 6px;
+.info ul li .skill_wrap {
+  display: flex;
+}
+
+.info ul li .skill {
+  display: flex;
+  align-items: center;
   border-radius: 5px;
   border: 1px solid #ececec;
+  padding: 5px 2px;
   margin-right: 5px;
+}
+
+.info ul li .skill span {
+  display: inline-block;
+  position: relative;
+}
+
+.info .shortcut {
+  display: flex;
+  justify-content: center;
+}
+
+.info .shortcut a {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ececec;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.info .shortcut a:first-child {
+  margin-right: 20px;
+}
+
+.info .shortcut a span {
+  font-size: 20px;
+}
+
+i {
+  margin-right: 5px;
+}
+
+i.github {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../assets/imgs/github.png") no-repeat;
+  background-size: contain;
+}
+
+i.view {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../assets/imgs/view.png") no-repeat;
+  background-size: contain;
+}
+
+i.react {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/react.png") no-repeat;
+  background-size: contain;
+}
+
+i.redux {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/redux.png") no-repeat;
+  background-size: contain;
+}
+
+i.nextjs {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/next.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.ts {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/ts.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.swr {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/swr.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.st {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background: url("../assets/imgs/st.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.fb {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/fb.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.js {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/js.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.scss {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/scss.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+i.pptr {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/imgs/pptr.png") no-repeat;
+  background-size: 100% 100%;
 }
 </style>
