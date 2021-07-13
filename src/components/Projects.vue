@@ -133,6 +133,18 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="view"></i>
+                    <span>VIEW</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -183,6 +195,18 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="view"></i>
+                    <span>VIEW</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -220,6 +244,18 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="view"></i>
+                    <span>VIEW</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -254,6 +290,18 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span>GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="view"></i>
+                    <span>VIEW</span>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -264,7 +312,6 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-
 export default defineComponent({
   name: "Projects",
 });
