@@ -3,6 +3,7 @@
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
     <Archive ref="archiveRef" />
+    <Contact />
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
 import Archive from "./components/archiving.vue";
+import Contact from "./components/contact.vue";
 
 export default defineComponent({
   name: "App",
@@ -18,6 +20,7 @@ export default defineComponent({
     Home,
     Projects,
     Archive,
+    Contact,
   },
   setup() {
     const homeRef = ref(null);
@@ -38,11 +41,8 @@ export default defineComponent({
         console.log("pro");
       }
       if (curScroll >= archiveTop.value) {
-        console.log("ac");
         const archive = archiveRef.value as any;
-        archive.$el.style.display = "flex";
-        // archive.$el.style.visibility = "visible";
-        archive.$el.style.opacity = "1";
+        archive.$el.firstElementChild.classList.add("wrap");
       }
     };
     onBeforeMount(() => {

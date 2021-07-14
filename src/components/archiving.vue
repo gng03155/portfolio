@@ -1,39 +1,41 @@
 <template>
   <div class="archive">
-    <div class="wrap">
+    <div>
       <div class="git">
-        <div class="logo">
-          <i class="github"></i>
-          <h3>GitHub</h3>
+        <div class="content">
+          <div class="logo">
+            <i class="github"></i>
+            <h3>GitHub</h3>
+          </div>
+          <div class="desc">
+            <p>소스코드 저장소 입니다.</p>
+            <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
+          </div>
+          <div class="link">
+            <a href="#">
+              <span>바로가기</span>
+              <i class="shortcut"></i>
+            </a>
+          </div>
         </div>
-        <div class="desc">
-          <p>소스코드 저장소 입니다.</p>
-          <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
-        </div>
-        <div class="link">
-          <a href="#">
-            <span>바로가기</span>
-            <i class="shortcut"></i>
-          </a>
-        </div>
-        <div></div>
       </div>
       <div class="notion">
-        <div class="logo">
-          <i class="notion"></i>
-          <h3>Notion</h3>
+        <div class="content2">
+          <div class="logo">
+            <i class="notion"></i>
+            <h3>Notion</h3>
+          </div>
+          <div class="desc">
+            <p>소스코드 저장소 입니다.</p>
+            <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
+          </div>
+          <div class="link">
+            <a href="#">
+              <span>바로가기</span>
+              <i class="shortcut"></i>
+            </a>
+          </div>
         </div>
-        <div class="desc">
-          <p>소스코드 저장소 입니다.</p>
-          <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
-        </div>
-        <div class="link">
-          <a href="#">
-            <span>바로가기</span>
-            <i class="shortcut"></i>
-          </a>
-        </div>
-        <div></div>
       </div>
     </div>
   </div>
@@ -50,39 +52,37 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .archive {
-  display: none;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* visibility: hidden; */
-  opacity: 0;
-  transition: all 3s linear;
 }
 
 .wrap {
   width: 800px;
-  /* background-color: lightgrey; */
   display: flex;
   flex-direction: column;
+  animation: fade 2s forwards;
 }
 
 .wrap > div {
   position: relative;
+  /* left: 0;
+  top: 0; */
   width: 400px;
   height: 200px;
   padding: 10px;
   background-color: lightpink;
 }
 
-div.git {
+.wrap div.git {
   align-self: flex-start;
-  animation: gt_move 3s 7s forwards;
+  animation: gt_move 3s 4s forwards;
 }
 
-div.git:after {
+.wrap div.git:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -90,15 +90,15 @@ div.git:after {
   top: 0;
   right: -100%;
   background-color: lightsalmon;
-  animation: gt_virtual_move 3s 4s forwards;
+  animation: gt_virtual_move 3s 2s forwards;
 }
 
-div.notion {
+.wrap div.notion {
   align-self: flex-end;
-  animation: nt_move 3s 7s forwards;
+  animation: nt_move 3s 4s forwards;
 }
 
-div.notion:after {
+.wrap div.notion:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -106,18 +106,78 @@ div.notion:after {
   top: 0;
   left: -100%;
   background-color: lightsalmon;
-  animation: nt_virtual_move 3s 4s forwards;
+  animation: nt_virtual_move 3s 2s forwards;
+}
+
+div.content {
+  position: relative;
+  animation: con_fade 2s 8s forwards;
+  z-index: 10;
+}
+
+div.content2 {
+  position: relative;
+  animation: con_fade2 2s 8s forwards;
+  z-index: 10;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes con_fade {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-200px);
+  }
+}
+
+@keyframes con_fade2 {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(200px);
+  }
 }
 
 @keyframes gt_move {
   0% {
+    /* transform: translateY(0px); */
     top: 0;
   }
   50% {
+    /* transform: translate(0px, 200px); */
     top: 200px;
-    left: 0px;
+    left: 0;
   }
   100% {
+    /* transform: translate(200px, 200px); */
     top: 200px;
     left: 200px;
   }
@@ -125,13 +185,16 @@ div.notion:after {
 
 @keyframes nt_move {
   0% {
+    /* transform: translateY(0px); */
     top: 0;
   }
   50% {
+    /* transform: translate(0px, -200px); */
     top: -200px;
-    left: 0px;
+    left: 0;
   }
   100% {
+    /* transform: translate(-200px, -200px); */
     top: -200px;
     left: -200px;
   }
