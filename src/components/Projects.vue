@@ -327,8 +327,29 @@ fieldset {
   width: 1280px;
   margin: 0 auto;
   height: 100%;
-  border: 5px solid #ccc;
   margin-bottom: 50px;
+  border: 5px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-size: 200% 200%;
+  animation: test 2s linear infinite;
+}
+
+@keyframes test {
+  25% {
+    background-position: left bottom;
+  }
+  50% {
+    background-position: right bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+  100% {
+    background-position: left top;
+  }
 }
 
 legend {

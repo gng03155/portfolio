@@ -109,15 +109,15 @@ export default defineComponent({
   animation: nt_virtual_move 3s 2s forwards;
 }
 
-div.content {
+.wrap div.content {
   position: relative;
-  animation: con_fade 2s 8s forwards;
+  animation: con_fade 1s 8s linear forwards;
   z-index: 10;
 }
 
-div.content2 {
+.wrap div.content2 {
   position: relative;
-  animation: con_fade2 2s 8s forwards;
+  animation: con_fade2 1s 8s linear forwards;
   z-index: 10;
 }
 

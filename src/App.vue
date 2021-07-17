@@ -3,7 +3,7 @@
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
     <Archive ref="archiveRef" />
-    <Contact />
+    <Contact ref="contactRef" />
   </div>
 </template>
 
@@ -26,9 +26,11 @@ export default defineComponent({
     const homeRef = ref(null);
     const projectRef = ref(null);
     const archiveRef = ref(null);
+    const contactRef = ref(null);
     let homeTop = ref(0);
     let projectTop = ref(0);
     let archiveTop = ref(0);
+    let contactTop = ref(0);
     const handleScroll = function () {
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
@@ -53,17 +55,21 @@ export default defineComponent({
       const home = homeRef.value as any;
       const project = projectRef.value as any;
       const archive = archiveRef.value as any;
+      const contact = contactRef.value as any;
       homeTop = ref(home.$el.offsetTop);
       projectTop = ref(project.$el.offsetTop);
       archiveTop = ref(archive.$el.offsetTop);
+      contactTop = ref(contact.$el.offsetTop);
     });
     return {
       homeTop,
       projectTop,
       archiveTop,
+      contactTop,
       homeRef,
       projectRef,
       archiveRef,
+      contactRef,
       handleScroll,
     };
   },
@@ -71,8 +77,8 @@ export default defineComponent({
 </script>
 
 <style>
-html,
 body {
+  width: 100%;
   overflow-x: hidden;
 }
 
