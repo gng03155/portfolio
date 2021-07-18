@@ -1,14 +1,5 @@
 <template>
-  <div class="home">
-    <header>
-      <ul>
-        <li><a href="#">about</a></li>
-        <li><a href="#">projects</a></li>
-        <li><a href="#">achive</a></li>
-        <li><a href="#">contact</a></li>
-      </ul>
-    </header>
-  </div>
+  <div class="home"></div>
 </template>
 
 <script lang="ts">
@@ -21,9 +12,15 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-header {
+.home {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+}
+header {
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
 }

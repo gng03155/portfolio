@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Mainmenu />
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
     <Archive ref="archiveRef" />
@@ -9,6 +10,7 @@
 
 <script lang="ts">
 import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
+import Mainmenu from "./components/Mainmenu.vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
 import Archive from "./components/archiving.vue";
@@ -21,6 +23,7 @@ export default defineComponent({
     Projects,
     Archive,
     Contact,
+    Mainmenu,
   },
   setup() {
     const homeRef = ref(null);
@@ -35,6 +38,7 @@ export default defineComponent({
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const curScroll = scrollTop + windowHeight;
+      const archive = archiveRef.value as any;
 
       if (curScroll >= homeTop.value) {
         console.log("home");
@@ -43,8 +47,9 @@ export default defineComponent({
         console.log("pro");
       }
       if (curScroll >= archiveTop.value) {
-        const archive = archiveRef.value as any;
         archive.$el.firstElementChild.classList.add("wrap");
+      } else {
+        archive.$el.firstElementChild.classList.remove("wrap");
       }
     };
     onBeforeMount(() => {
@@ -81,10 +86,11 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-
-h2 {
+body h2 {
   text-transform: uppercase;
+  text-align: center;
   font-size: 30px;
+  border: 1px solid #000;
   margin-bottom: 50px;
 }
 </style>
