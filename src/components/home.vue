@@ -1,5 +1,5 @@
 <template>
-  <div class="home"></div>
+  <div id="home"></div>
 </template>
 
 <script lang="ts">
@@ -12,7 +12,7 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.home {
+#home {
   top: 0;
   left: 0;
   width: 100%;

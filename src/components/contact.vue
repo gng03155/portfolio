@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div id="contact">
     <div class="wrap">
       <div class="card" ref="cardRef">
         <div class="wall" ref="wallRef"></div>
@@ -134,6 +134,21 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.wrap .card {
+  animation: fade_card 0.5s linear forwards;
+}
+
+@keyframes fade_card {
+  from {
+    top: 150px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
 .card {

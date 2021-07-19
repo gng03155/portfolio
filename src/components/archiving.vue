@@ -1,40 +1,40 @@
 <template>
-  <div class="archive">
+  <div id="archive">
     <div>
       <div class="git">
-        <div class="content">
-          <div class="logo">
-            <i class="github"></i>
-            <h3>GitHub</h3>
-          </div>
-          <div class="desc">
-            <p>소스코드 저장소 입니다.</p>
-            <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
-          </div>
-          <div class="link">
-            <a href="#">
-              <span>바로가기</span>
-              <i class="shortcut"></i>
-            </a>
-          </div>
+        <div class="logo">
+          <i class="github"></i>
+          <h3 class="f_gmarket">GitHub</h3>
+        </div>
+        <div class="desc">
+          <p class="f_gmarket">소스코드 저장소 입니다.</p>
+          <p class="f_gmarket">
+            지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.
+          </p>
+        </div>
+        <div class="link">
+          <a href="#">
+            <span class="f_gmarket">바로가기</span>
+            <i class="shortcut"></i>
+          </a>
         </div>
       </div>
       <div class="notion">
-        <div class="content2">
-          <div class="logo">
-            <i class="notion"></i>
-            <h3>Notion</h3>
-          </div>
-          <div class="desc">
-            <p>소스코드 저장소 입니다.</p>
-            <p>지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.</p>
-          </div>
-          <div class="link">
-            <a href="#">
-              <span>바로가기</span>
-              <i class="shortcut"></i>
-            </a>
-          </div>
+        <div class="logo">
+          <i class="notion"></i>
+          <h3 class="f_gmarket">Notion</h3>
+        </div>
+        <div class="desc">
+          <p class="f_gmarket">소스코드 저장소 입니다.</p>
+          <p class="f_gmarket">
+            지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.
+          </p>
+        </div>
+        <div class="link">
+          <a href="#">
+            <span class="f_gmarket">바로가기</span>
+            <i class="shortcut"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -51,7 +51,7 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.archive {
+#archive {
   width: 100%;
   height: 100vh;
   max-height: 100vh;
@@ -62,42 +62,51 @@ export default defineComponent({
 
 .wrap {
   width: 800px;
+  height: 300px;
   display: flex;
-  flex-direction: column;
-  animation: fade 2s forwards;
+  justify-content: space-between;
+  animation: fade 1s forwards;
 }
 
 .wrap > div {
   position: relative;
-  /* left: 0;
-  top: 0; */
-  width: 400px;
-  height: 200px;
-  padding: 10px;
-  background-color: lightpink;
+  width: 320px;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(177, 159, 161);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .wrap div.git {
-  align-self: flex-start;
-  animation: gt_move 3s 4s forwards;
+  position: relative;
+  /* transform: translateX(500%); */
+  left: 400%;
+  animation: gt_move 2s forwards ease-out;
 }
 
-.wrap div.git:after {
+/* .wrap div.git:after {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
   top: 0;
   right: -100%;
-  background-color: lightsalmon;
+  background-color: rgb(29, 29, 29);
   animation: gt_virtual_move 3s 2s forwards;
-}
+} */
 
 .wrap div.notion {
-  align-self: flex-end;
-  animation: nt_move 3s 4s forwards;
+  position: relative;
+  /* transform: translateX(-500%); */
+  left: -400%;
+  animation: nt_move 2s forwards ease-out;
 }
-
+/* 
 .wrap div.notion:after {
   position: absolute;
   content: "";
@@ -105,30 +114,44 @@ export default defineComponent({
   height: 100%;
   top: 0;
   left: -100%;
-  background-color: lightsalmon;
+  background-color: rgb(29, 29, 29);
   animation: nt_virtual_move 3s 2s forwards;
-}
+} */
 
-.wrap div.content {
+/* .wrap div.content {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   animation: con_fade 1s 8s linear forwards;
   z-index: 10;
 }
 
 .wrap div.content2 {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   animation: con_fade2 1s 8s linear forwards;
   z-index: 10;
-}
+} */
 
-@keyframes fade {
+/* @keyframes fade {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
-}
+} */
 
 @keyframes con_fade {
   0% {
@@ -136,15 +159,15 @@ export default defineComponent({
   }
   20% {
     opacity: 0;
-    transform: translateY(0px);
+    top: 0;
   }
   80% {
     opacity: 0;
-    transform: translateY(-200px);
+    top: -100%;
   }
   100% {
     opacity: 1;
-    transform: translateY(-200px);
+    top: -100%;
   }
 }
 
@@ -154,49 +177,76 @@ export default defineComponent({
   }
   20% {
     opacity: 0;
-    transform: translateY(0px);
+    top: 0;
+    /* transform: translateY(0px); */
   }
   80% {
     opacity: 0;
-    transform: translateY(200px);
+    top: 100%;
+    /* transform: translateY(200px); */
   }
   100% {
     opacity: 1;
-    transform: translateY(200px);
+    top: 100%;
+    /* transform: translateY(200px); */
   }
 }
 
 @keyframes gt_move {
   0% {
-    /* transform: translateY(0px); */
-    top: 0;
+    opacity: 0;
   }
-  50% {
-    /* transform: translate(0px, 200px); */
-    top: 200px;
-    left: 0;
+  70% {
+    left: 0px;
+  }
+  75% {
+    left: 30px;
+  }
+  80% {
+    left: 0px;
+  }
+  85% {
+    left: 20px;
+  }
+  90% {
+    left: 0px;
+  }
+  95% {
+    left: 10px;
   }
   100% {
-    /* transform: translate(200px, 200px); */
-    top: 200px;
-    left: 200px;
+    opacity: 1;
+    left: 0;
+    /* transform: translateX(-500%); */
   }
 }
 
 @keyframes nt_move {
   0% {
-    /* transform: translateY(0px); */
-    top: 0;
+    opacity: 0;
   }
-  50% {
-    /* transform: translate(0px, -200px); */
-    top: -200px;
-    left: 0;
+  70% {
+    left: 0px;
+  }
+  75% {
+    left: -30px;
+  }
+  80% {
+    left: 0px;
+  }
+  85% {
+    left: -20px;
+  }
+  90% {
+    left: 0px;
+  }
+  95% {
+    left: -10px;
   }
   100% {
-    /* transform: translate(-200px, -200px); */
-    top: -200px;
-    left: -200px;
+    opacity: 1;
+    left: 0;
+    /* transform: translateX(500%); */
   }
 }
 
@@ -244,7 +294,7 @@ export default defineComponent({
 .link a {
   display: flex;
   align-items: center;
-  padding: 2px;
+  padding: 5px;
   border: 1px solid #ececec;
   border-radius: 5px;
 }
@@ -271,8 +321,8 @@ i.notion {
 
 i.shortcut {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background: url("../assets/imgs/shortcut.png") no-repeat;
   background-size: contain;
 }

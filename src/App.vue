@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Mainmenu />
+    <Mainmenu v-bind:numbers="[homeTop, projectTop, archiveTop, contactTop]" />
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
     <Archive ref="archiveRef" />
@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
+import { ref, defineComponent, onBeforeMount, onMounted, watch } from "vue";
 import Mainmenu from "./components/Mainmenu.vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
@@ -40,18 +40,22 @@ export default defineComponent({
       const curScroll = scrollTop + windowHeight;
       const archive = archiveRef.value as any;
 
-      if (curScroll >= homeTop.value) {
-        console.log("home");
-      }
-      if (curScroll >= projectTop.value) {
-        console.log("pro");
-      }
+      // if (curScroll >= homeTop.value) {
+      //   console.log("home");
+      // }
+      // if (curScroll >= projectTop.value) {
+      //   console.log("pro");
+      // }
       if (curScroll >= archiveTop.value) {
         archive.$el.firstElementChild.classList.add("wrap");
       } else {
         archive.$el.firstElementChild.classList.remove("wrap");
       }
     };
+    watch(projectTop, (projectTop, prevProjectTop) => {
+      console.log(projectTop);
+      console.log(prevProjectTop);
+    });
     onBeforeMount(() => {
       // 핸들러 등록하기
       window.addEventListener("scroll", handleScroll);
@@ -61,10 +65,10 @@ export default defineComponent({
       const project = projectRef.value as any;
       const archive = archiveRef.value as any;
       const contact = contactRef.value as any;
-      homeTop = ref(home.$el.offsetTop);
-      projectTop = ref(project.$el.offsetTop);
-      archiveTop = ref(archive.$el.offsetTop);
-      contactTop = ref(contact.$el.offsetTop);
+      homeTop.value = home.$el.offsetTop;
+      projectTop.value = project.$el.offsetTop;
+      archiveTop.value = archive.$el.offsetTop;
+      contactTop.value = contact.$el.offsetTop;
     });
     return {
       homeTop,

@@ -1,27 +1,27 @@
 <template>
   <div id="projects">
     <div class="middle">
-      <h2 class="f_gmaket">projects</h2>
+      <h2 class="f_gmarket">projects</h2>
     </div>
     <div class="project_wrap">
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">PHOTOSHOP</h3>
+          <h3 class="f_gmarket">PHOTOSHOP</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video src="../assets/video/lol.mp4" autoplay loop muted></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
-                <h4 class="f_gmaket">프로젝트개요</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">
                   카페24를 통해 실제 쇼핑몰의 디자인 및 기능을 참고하여 이질감이
                   느껴지지 않는 진짜같은 프로젝트를 만드는것이 목적이었습니다.
                 </p>
-                <p class="f_gmaket">
+                <p class="f_gmarket">
                   지금까지 프로젝트는 기존에 존재하는 더미데이터 및 api데이터를
                   단순히 가져와서 가공하여 사용했다면, 이번 프로젝트는 직접
                   데이터베이스 구조를 설계했습니다. 이전까지는 데이터 구조에
@@ -32,8 +32,8 @@
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">
                   로그인 , 회원가입 , 마이페이지 , 위시리스트 , 장바구니 , 주문
                   , 주문내역 , 상품 카테고리 , 디테일 상품 , 게시판 ,
                   첨부파일...등
@@ -44,43 +44,43 @@
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
-                    <span class="f_gmaket">React</span>
+                    <span class="f_gmarket">React</span>
                   </div>
                   <div class="skill">
                     <i class="nextjs"></i>
-                    <span class="f_gmaket">Next.js</span>
+                    <span class="f_gmarket">Next.js</span>
                   </div>
                   <div class="skill">
                     <i class="ts"></i>
-                    <span class="f_gmaket">Typescript</span>
+                    <span class="f_gmarket">Typescript</span>
                   </div>
                   <div class="skill">
                     <i class="swr"></i>
-                    <span class="f_gmaket">SWR</span>
+                    <span class="f_gmarket">SWR</span>
                   </div>
                   <div class="skill">
                     <i class="st"></i>
-                    <span class="f_gmaket">StyledComponents</span>
+                    <span class="f_gmarket">StyledComponents</span>
                   </div>
                   <div class="skill">
                     <i class="fb"></i>
-                    <span class="f_gmaket">FireBase</span>
+                    <span class="f_gmarket">FireBase</span>
                   </div>
                 </div>
               </li>
               <li>
                 <h4>개발노트</h4>
-                <p class="f_gmaket">dddddddddd</p>
+                <p class="f_gmarket">dddddddddd</p>
               </li>
               <li>
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <span class="f_gmarket">VIEW</span>
                   </a>
                 </div>
               </li>
@@ -90,7 +90,7 @@
       </fieldset>
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">실시간 코인 조회</h3>
+          <h3 class="f_gmarket">실시간 코인 조회</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video
@@ -100,19 +100,19 @@
                 muted
               ></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
                 <h4>프로젝트개요</h4>
-                <p class="f_gmaket">
+                <p class="f_gmarket">
                   주변 지인에게 부탁을 받아 개발하게 되었습니다. 지금까진
                   단순하게 공부의 목적으로 개발했다면, 이번엔 타인의 요청으로
                   인해 개발 하다보니 단순히 기능만 구현하기 보다는 사용자가 좀
                   더 편리하게 사용할 수 있도록 UI부분도 신경을 많이 썼습니다.
                 </p>
-                <p class="f_gmaket">
+                <p class="f_gmarket">
                   국내 가상화폐 거래소 플랫폼인 Upbit의 코인 정보를 Websocket을
                   통해 실시간으로 정보를 받아오고 글로벌 플랫폼인 Binance에서
                   정보를 받아와 현재 환율에 따른 국내와 해외간 시세 차익을
@@ -120,8 +120,8 @@
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">
                   실시간 코인 시세 정보 , 국내와 해외간 시세 차익
                 </p>
               </li>
@@ -130,19 +130,19 @@
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
-                    <span class="f_gmaket">React</span>
+                    <span class="f_gmarket">React</span>
                   </div>
                   <div class="skill">
                     <i class="redux"></i>
-                    <span class="f_gmaket">redux</span>
+                    <span class="f_gmarket">redux</span>
                   </div>
                   <div class="skill">
                     <i class="ts"></i>
-                    <span class="f_gmaket">Typescript</span>
+                    <span class="f_gmarket">Typescript</span>
                   </div>
                   <div class="skill">
                     <i class="socket"></i>
-                    <span class="f_gmaket">websocket</span>
+                    <span class="f_gmarket">websocket</span>
                   </div>
                 </div>
               </li>
@@ -150,11 +150,11 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <span class="f_gmarket">VIEW</span>
                   </a>
                 </div>
               </li>
@@ -164,30 +164,30 @@
       </fieldset>
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">리그오브레전드 전적 조회</h3>
+          <h3 class="f_gmarket">리그오브레전드 전적 조회</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video src="../assets/video/lol.mp4" autoplay loop muted></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
                 <h4>프로젝트개요</h4>
-                <p class="f_gmaket">
+                <p class="f_gmarket">
                   국내 리그오브레전드 전적 조회 사이트인 OP.GG를 통해 데이터
                   크롤링을 하여 전적정보를 가져옴
                 </p>
-                <p class="f_gmaket">
+                <p class="f_gmarket">
                   해당 사이트의 크롤링 권한 정보를 나타내는 robots.txt파일을
                   확인하여 전체 영역에 대해 허락한것을 확인 후 프로젝트를
                   진행하였습니다.
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">
                   인게임 내 전적 정보 조회 , 인피니티 스크롤링 구현
                 </p>
               </li>
@@ -196,19 +196,19 @@
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
-                    <span class="f_gmaket">React</span>
+                    <span class="f_gmarket">React</span>
                   </div>
                   <div class="skill">
                     <i class="ts"></i>
-                    <span class="f_gmaket">Typescript</span>
+                    <span class="f_gmarket">Typescript</span>
                   </div>
                   <div class="skill">
                     <i class="pptr"></i>
-                    <span class="f_gmaket">puppeteer</span>
+                    <span class="f_gmarket">puppeteer</span>
                   </div>
                   <div class="skill">
                     <i class="express"></i>
-                    <span class="f_gmaket">express</span>
+                    <span class="f_gmarket">express</span>
                   </div>
                 </div>
               </li>
@@ -216,11 +216,11 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <span class="f_gmarket">VIEW</span>
                   </a>
                 </div>
               </li>
@@ -230,7 +230,7 @@
       </fieldset>
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">Interractive CSS Modell</h3>
+          <h3 class="f_gmarket">Interractive CSS Modell</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video
@@ -420,7 +420,8 @@ fieldset {
   margin-bottom: 50px;
   border: 5px solid transparent;
   background-image: linear-gradient(#fff, #fff),
-    radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa);
+    radial-gradient(#e6dada, #274046);
+  /* radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa); */
   background-origin: border-box;
   background-clip: content-box, border-box;
   background-size: 200% 200%;
