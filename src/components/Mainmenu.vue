@@ -2,23 +2,34 @@
   <div id="mainmenu">
     <ul>
       <li>
-        <a class="f_gmarket" v-on:click="onClickMenu('home')">about</a>
+        <a
+          ref="homeRef"
+          class="f_gmarket active"
+          v-on:click="onClickMenu('home')"
+          >home</a
+        >
       </li>
       <li>
-        <a class="f_gmarket" v-on:click="onClickMenu('projects')">projects</a>
+        <a ref="proRef" class="f_gmarket" v-on:click="onClickMenu('projects')"
+          >projects</a
+        >
       </li>
       <li>
-        <a class="f_gmarket" v-on:click="onClickMenu('archive')">archive</a>
+        <a ref="arRef" class="f_gmarket" v-on:click="onClickMenu('archive')"
+          >archive</a
+        >
       </li>
       <li>
-        <a class="f_gmarket" v-on:click="onClickMenu('contact')">contact</a>
+        <a ref="conRef" class="f_gmarket" v-on:click="onClickMenu('contact')"
+          >contact</a
+        >
       </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, watchEffect } from "vue";
+import { ref, defineComponent, onMounted, watchEffect, watch } from "vue";
 
 export default defineComponent({
   name: "Mainmenu",
@@ -28,13 +39,28 @@ export default defineComponent({
       required: true,
       default: () => [0, 0, 0, 0],
     },
+    curArea: {
+      type: String,
+      required: true,
+      default: "",
+    },
   },
   setup(props) {
+    const homeRef = ref<null | HTMLDivElement>(null);
+    const proRef = ref<null | HTMLDivElement>(null);
+    const arRef = ref<null | HTMLDivElement>(null);
+    const conRef = ref<null | HTMLDivElement>(null);
     const roop = ref(0);
     const onClickMenu = (name: string) => {
+      const home = homeRef.value as HTMLDivElement;
+      const pro = proRef.value as HTMLDivElement;
+      const ar = arRef.value as HTMLDivElement;
+      const con = conRef.value as HTMLDivElement;
+
       const step = 20;
       const between = 1;
       const speed = 0.1;
+
       switch (name) {
         case "home": {
           const move =
@@ -44,6 +70,10 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
+          // home.classList.add("active");
+          // pro.classList.remove("active");
+          // ar.classList.remove("active");
+          // con.classList.remove("active");
           break;
         }
         case "projects": {
@@ -54,6 +84,10 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
+          // home.classList.remove("active");
+          // pro.classList.add("active");
+          // ar.classList.remove("active");
+          // con.classList.remove("active");
           break;
         }
         case "archive": {
@@ -64,6 +98,10 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
+          // home.classList.remove("active");
+          // pro.classList.remove("active");
+          // ar.classList.add("active");
+          // con.classList.remove("active");
           break;
         }
         case "contact": {
@@ -74,6 +112,10 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
+          // home.classList.remove("active");
+          // pro.classList.remove("active");
+          // ar.classList.remove("active");
+          // con.classList.add("active");
           break;
         }
         default:
@@ -86,7 +128,8 @@ export default defineComponent({
       }
     };
     const smoothScroll = (move: number, step: number, speed: number) => {
-      const curPos = window.scrollY;
+      // const curPos = window.top.scrollY;
+      const curPos = Math.ceil(window.top.scrollY);
       if (curPos === move) {
         return;
       }
@@ -101,16 +144,61 @@ export default defineComponent({
           ? move
           : curPos - curStep;
       window.scrollTo(0, movePos);
+      console.log(movePos, curPos);
       roop.value = setTimeout(() => smoothScroll(move, curStep, curSpeed), 1);
     };
-    watchEffect(() => {
-      console.log(props.numbers);
-    });
-    // watch(props.numbers, (newProps, prevProps) => {
-    //   console.log(newProps);
-    //   console.log(prevProps);
+    // watchEffect((aa) => {
+    //   console.log(aa);
     // });
+    watch(
+      () => props.curArea,
+      (newProps: string, prevProps: string) => {
+        console.log(
+          `change Props : curArea , prev : ${prevProps} , new : ${newProps}`
+        );
+        const home = homeRef.value as HTMLDivElement;
+        const pro = proRef.value as HTMLDivElement;
+        const ar = arRef.value as HTMLDivElement;
+        const con = conRef.value as HTMLDivElement;
+        switch (newProps) {
+          case "home": {
+            home.classList.add("active");
+            pro.classList.remove("active");
+            ar.classList.remove("active");
+            con.classList.remove("active");
+            break;
+          }
+          case "projects": {
+            home.classList.remove("active");
+            pro.classList.add("active");
+            ar.classList.remove("active");
+            con.classList.remove("active");
+            break;
+          }
+          case "archive": {
+            home.classList.remove("active");
+            pro.classList.remove("active");
+            ar.classList.add("active");
+            con.classList.remove("active");
+            break;
+          }
+          case "contact": {
+            home.classList.remove("active");
+            pro.classList.remove("active");
+            ar.classList.remove("active");
+            con.classList.add("active");
+            break;
+          }
+          default:
+            break;
+        }
+      }
+    );
     return {
+      homeRef,
+      proRef,
+      arRef,
+      conRef,
       roop,
       onClickMenu,
     };
@@ -128,7 +216,7 @@ export default defineComponent({
   height: 80px;
   display: flex;
   justify-content: center;
-  background: #efefef;
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
 }
 
@@ -144,5 +232,11 @@ a {
   padding-left: 20px;
   padding-right: 20px;
   cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+}
+
+a.active {
+  font-weight: 700;
 }
 </style>

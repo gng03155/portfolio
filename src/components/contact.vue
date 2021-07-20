@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-    <div class="wrap">
+    <div>
       <div class="card" ref="cardRef">
         <div class="wall" ref="wallRef"></div>
         <div class="front" ref="frontRef"></div>
@@ -51,7 +51,6 @@ export default defineComponent({
       moving.value = true;
       setTimeout(() => {
         moving.value = false;
-        console.log("in");
       }, 1000);
       // console.log("over");
       // const frontTrans = window.getComputedStyle(front).transform;
@@ -86,7 +85,6 @@ export default defineComponent({
       moving.value = true;
       setTimeout(() => {
         moving.value = false;
-        console.log("in");
       }, 1000);
       // console.log("out");
       // const front = frontRef.value as any;
@@ -128,9 +126,13 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wrap {
+#contact {
   width: 100%;
   height: 100vh;
+}
+.wrap {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,7 +156,7 @@ export default defineComponent({
 .card {
   position: relative;
   width: 600px;
-  height: 400px;
+  height: 360px;
 }
 
 .card > div {
@@ -166,6 +168,7 @@ export default defineComponent({
   backface-visibility: hidden;
   transition: transform 1.5s;
   perspective-origin: center;
+  border-radius: 20px;
 }
 
 .wall {

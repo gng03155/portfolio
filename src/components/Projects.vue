@@ -1,8 +1,5 @@
 <template>
   <div id="projects">
-    <div class="middle">
-      <h2 class="f_gmarket">projects</h2>
-    </div>
     <div class="project_wrap">
       <fieldset>
         <div class="content">
@@ -409,8 +406,8 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#projects {
-  min-height: 100vh;
+.project_wrap {
+  padding: 100px 0;
 }
 
 fieldset {
@@ -419,16 +416,49 @@ fieldset {
   height: 100%;
   margin-bottom: 50px;
   border: 5px solid transparent;
-  background-image: linear-gradient(#fff, #fff),
+  /* background-image: linear-gradient(#fafafa, #fafafa),
     radial-gradient(#e6dada, #274046);
-  /* radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa); */
+      radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa); */
   background-origin: border-box;
   background-clip: content-box, border-box;
   background-size: 200% 200%;
-  animation: test 2s linear infinite;
+  border-radius: 20px;
+  animation: border_gradient 2s linear infinite;
 }
 
-@keyframes test {
+fieldset:nth-child(1) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#f5f5f1, #e50914);
+}
+fieldset:nth-child(2) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#ffd4a1, #ec9f05, #ff4e00);
+}
+fieldset:nth-child(3) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#fafafa, #f9ff60, #ffef77);
+}
+fieldset:nth-child(4) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#7ee8fa, #80ff72);
+}
+fieldset:nth-child(5) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#f5f7f6, #5ca0f2);
+}
+fieldset:nth-child(6) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#04619f, #041e70);
+}
+fieldset:nth-child(7) {
+  background-image: linear-gradient(#ffffff, #ffffff),
+    radial-gradient(#c797eb, #f0ecfc);
+}
+
+@keyframes border_gradient {
+  0% {
+    background-position: left top;
+  }
   25% {
     background-position: left bottom;
   }

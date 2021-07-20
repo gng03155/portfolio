@@ -1,20 +1,25 @@
 <template>
-  <div>
-    <Mainmenu v-bind:numbers="[homeTop, projectTop, archiveTop, contactTop]" />
+  <div class="app">
+    <Mainmenu
+      v-bind:numbers="[homeTop, projectTop, archiveTop, contactTop]"
+      v-bind:curArea="curArea"
+    />
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
     <Archive ref="archiveRef" />
     <Contact ref="contactRef" />
+    <Footer />
   </div>
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, onBeforeMount, onMounted, watch } from "vue";
+import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
 import Mainmenu from "./components/Mainmenu.vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
 import Archive from "./components/archiving.vue";
 import Contact from "./components/contact.vue";
+import Footer from "./components/footer.vue";
 
 export default defineComponent({
   name: "App",
@@ -24,8 +29,10 @@ export default defineComponent({
     Archive,
     Contact,
     Mainmenu,
+    Footer,
   },
   setup() {
+    const init = ref(false);
     const homeRef = ref(null);
     const projectRef = ref(null);
     const archiveRef = ref(null);
@@ -34,41 +41,60 @@ export default defineComponent({
     let projectTop = ref(0);
     let archiveTop = ref(0);
     let contactTop = ref(0);
+    let curArea = ref("home");
     const handleScroll = function () {
-      const scrollTop = window.scrollY;
+      const scrollTop = Math.ceil(window.top.scrollY);
       const windowHeight = window.innerHeight;
       const curScroll = scrollTop + windowHeight;
       const archive = archiveRef.value as any;
+      const contact = contactRef.value as any;
+      if (scrollTop >= homeTop.value) {
+        curArea.value = "home";
+      }
+      if (scrollTop >= projectTop.value) {
+        curArea.value = "projects";
+      }
+      if (scrollTop >= archiveTop.value) {
+        curArea.value = "archive";
+      }
+      if (scrollTop >= contactTop.value) {
+        curArea.value = "contact";
+      }
 
       // if (curScroll >= homeTop.value) {
-      //   console.log("home");
       // }
       // if (curScroll >= projectTop.value) {
-      //   console.log("pro");
       // }
       if (curScroll >= archiveTop.value) {
         archive.$el.firstElementChild.classList.add("wrap");
       } else {
         archive.$el.firstElementChild.classList.remove("wrap");
       }
+      if (curScroll >= contactTop.value) {
+        contact.$el.firstElementChild.classList.add("wrap");
+      }
     };
-    watch(projectTop, (projectTop, prevProjectTop) => {
-      console.log(projectTop);
-      console.log(prevProjectTop);
-    });
     onBeforeMount(() => {
       // 핸들러 등록하기
       window.addEventListener("scroll", handleScroll);
     });
     onMounted(() => {
+      if (init.value) {
+        return;
+      }
       const home = homeRef.value as any;
       const project = projectRef.value as any;
       const archive = archiveRef.value as any;
       const contact = contactRef.value as any;
+      console.dir(archive.$el);
+      console.log(archive.$el.offsetTop);
+      console.log(archive.$el.getBoundingClientRect().top);
       homeTop.value = home.$el.offsetTop;
       projectTop.value = project.$el.offsetTop;
       archiveTop.value = archive.$el.offsetTop;
       contactTop.value = contact.$el.offsetTop;
+      init.value = true;
+      debugger;
     });
     return {
       homeTop,
@@ -79,6 +105,7 @@ export default defineComponent({
       projectRef,
       archiveRef,
       contactRef,
+      curArea,
       handleScroll,
     };
   },
