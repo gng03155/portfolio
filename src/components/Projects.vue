@@ -37,7 +37,7 @@
                 </p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
@@ -66,18 +66,18 @@
                 </div>
               </li>
               <li>
-                <h4>개발노트</h4>
-                <p class="f_gmarket">dddddddddd</p>
-              </li>
-              <li>
                 <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="notion"></i>
+                    <span class="f_gmarket">Notion</span>
+                  </a>
                   <a href="#" target="_blank">
                     <i class="github"></i>
                     <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmarket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -102,7 +102,7 @@
           <div class="info">
             <ul>
               <li>
-                <h4>프로젝트개요</h4>
+                <h4 class="f_gmarket">프로젝트개요</h4>
                 <p class="f_gmarket">
                   주변 지인에게 부탁을 받아 개발하게 되었습니다. 지금까진
                   단순하게 공부의 목적으로 개발했다면, 이번엔 타인의 요청으로
@@ -123,7 +123,7 @@
                 </p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
@@ -146,12 +146,16 @@
               <li>
                 <div class="shortcut">
                   <a href="#" target="_blank">
+                    <i class="notion"></i>
+                    <span class="f_gmarket">Notion</span>
+                  </a>
+                  <a href="#" target="_blank">
                     <i class="github"></i>
                     <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmarket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -171,7 +175,7 @@
           <div class="info">
             <ul>
               <li>
-                <h4>프로젝트개요</h4>
+                <h4 class="f_gmarket">프로젝트개요</h4>
                 <p class="f_gmarket">
                   국내 리그오브레전드 전적 조회 사이트인 OP.GG를 통해 데이터
                   크롤링을 하여 전적정보를 가져옴
@@ -189,7 +193,7 @@
                 </p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="react"></i>
@@ -212,12 +216,16 @@
               <li>
                 <div class="shortcut">
                   <a href="#" target="_blank">
+                    <i class="notion"></i>
+                    <span class="f_gmarket">Notion</span>
+                  </a>
+                  <a href="#" target="_blank">
                     <i class="github"></i>
                     <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmarket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -237,33 +245,33 @@
                 muted
               ></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
-                <h4>프로젝트개요</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">
                   순수 자바스크립트만을 이용해서 개발하였습니다.
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">
                   padding,margin 크기에 따른 interactive modelling , 슬라이더
                   구현
                 </p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="js"></i>
-                    <span class="f_gmaket">js</span>
+                    <span class="f_gmarket">js</span>
                   </div>
                   <div class="skill">
                     <i class="scss"></i>
-                    <span class="f_gmaket">scss</span>
+                    <span class="f_gmarket">scss</span>
                   </div>
                 </div>
               </li>
@@ -271,11 +279,11 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -285,7 +293,7 @@
       </fieldset>
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">BREAK-OUT</h3>
+          <h3 class="f_gmarket">BREAK-OUT</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video
@@ -295,30 +303,30 @@
                 muted
               ></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
-                <h4>프로젝트개요</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">
                   순수 자바스크립트만을 이용해서 개발하였습니다.
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">벽돌부시기</p>
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">벽돌부시기</p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="js"></i>
-                    <span class="f_gmaket">js</span>
+                    <span class="f_gmarket">js</span>
                   </div>
                   <div class="skill">
                     <i class="scss"></i>
-                    <span class="f_gmaket">scss</span>
+                    <span class="f_gmarket">scss</span>
                   </div>
                 </div>
               </li>
@@ -326,11 +334,11 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -340,7 +348,7 @@
       </fieldset>
       <fieldset>
         <div class="content">
-          <h3 class="f_gmaket">DRAG-DROP</h3>
+          <h3 class="f_gmarket">DRAG-DROP</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video
@@ -350,30 +358,30 @@
                 muted
               ></video>
             </div>
-            <span class="f_gmaket">미리보기</span>
+            <span class="f_gmarket">미리보기</span>
           </div>
           <div class="info">
             <ul>
               <li>
-                <h4>프로젝트개요</h4>
-                <p class="f_gmaket">
+                <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">
                   순수 자바스크립트만을 이용해서 개발하였습니다.
                 </p>
               </li>
               <li>
-                <h4 class="f_gmaket">주요기능</h4>
-                <p class="f_gmaket">Drag-Drop , Painting , CanvasSave</p>
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">Drag-Drop , Painting , CanvasSave</p>
               </li>
               <li>
-                <h4>SKILL</h4>
+                <h4 class="f_gmarket">SKILL</h4>
                 <div class="skill_wrap">
                   <div class="skill">
                     <i class="js"></i>
-                    <span class="f_gmaket">js</span>
+                    <span class="f_gmarket">js</span>
                   </div>
                   <div class="skill">
                     <i class="scss"></i>
-                    <span class="f_gmaket">scss</span>
+                    <span class="f_gmarket">scss</span>
                   </div>
                 </div>
               </li>
@@ -381,11 +389,11 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="github"></i>
-                    <span class="f_gmaket">GitHub</span>
+                    <span class="f_gmarket">GitHub</span>
                   </a>
                   <a href="#" target="_blank">
-                    <i class="view"></i>
-                    <span class="f_gmaket">VIEW</span>
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
                   </a>
                 </div>
               </li>
@@ -415,7 +423,7 @@ fieldset {
   margin: 0 auto;
   height: 100%;
   margin-bottom: 50px;
-  border: 5px solid transparent;
+  border: 3px solid transparent;
   /* background-image: linear-gradient(#fafafa, #fafafa),
     radial-gradient(#e6dada, #274046);
       radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa); */
@@ -455,6 +463,35 @@ fieldset:nth-child(7) {
     radial-gradient(#c797eb, #f0ecfc);
 }
 
+fieldset:nth-child(1) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(200, 112, 126, 0.5);
+  color: #c8707e;
+}
+fieldset:nth-child(2) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(228, 142, 88, 0.5);
+  color: #e48e58;
+}
+fieldset:nth-child(3) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(255, 255, 79, 0.5);
+  color: #ffff4f;
+}
+fieldset:nth-child(4) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(168, 200, 121, 0.5);
+  color: #a8c879;
+}
+fieldset:nth-child(5) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(76, 146, 177, 0.5);
+  color: #4c92b1;
+}
+fieldset:nth-child(6) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(119, 158, 203, 0.5);
+  color: #779ecb;
+}
+fieldset:nth-child(7) h3 {
+  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(172, 153, 193, 0.5);
+  color: #ac99c1;
+}
+
 @keyframes border_gradient {
   0% {
     background-position: left top;
@@ -492,6 +529,7 @@ fieldset:nth-child(2n) legend {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  color: #111;
 }
 
 .content h3 {
@@ -499,8 +537,8 @@ fieldset:nth-child(2n) legend {
   font-size: 30px;
   margin-bottom: 25px;
   text-align: center;
-  text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(0, 0, 0, 0.25);
-  color: #3f3f3f;
+  /* text-shadow: 1px 1px 0 rgb(223, 227, 229), 4px 4px 0 rgba(0, 0, 0, 0.25);
+  color: #3f3f3f; */
 }
 
 .thumbnail {
@@ -558,6 +596,7 @@ fieldset:nth-child(2n) legend {
   position: relative;
   font-size: 14px;
   padding-left: 20px;
+  line-height: 1.4;
 }
 
 .info ul li p:before {
@@ -611,6 +650,14 @@ i {
   margin-right: 5px;
 }
 
+i.notion {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../assets/imgs/notion.png") no-repeat;
+  background-size: contain;
+}
+
 i.github {
   display: inline-block;
   width: 40px;
@@ -619,11 +666,11 @@ i.github {
   background-size: contain;
 }
 
-i.view {
+i.web {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url("../assets/imgs/view.png") no-repeat;
+  background: url("../assets/imgs/website.png") no-repeat;
   background-size: contain;
 }
 

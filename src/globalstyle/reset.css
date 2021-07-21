@@ -83,11 +83,11 @@ video {
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  color : #111;
 }
 
 a {
   text-decoration: none;
-  color : #555;
 }
 
 ul,

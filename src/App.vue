@@ -65,13 +65,15 @@ export default defineComponent({
       // }
       // if (curScroll >= projectTop.value) {
       // }
-      if (curScroll >= archiveTop.value) {
+      if (curScroll > archiveTop.value) {
         archive.$el.firstElementChild.classList.add("wrap");
       } else {
         archive.$el.firstElementChild.classList.remove("wrap");
       }
-      if (curScroll >= contactTop.value) {
+      if (curScroll > contactTop.value) {
         contact.$el.firstElementChild.classList.add("wrap");
+      } else {
+        contact.$el.firstElementChild.classList.remove("wrap");
       }
     };
     onBeforeMount(() => {
@@ -82,19 +84,38 @@ export default defineComponent({
       if (init.value) {
         return;
       }
-      const home = homeRef.value as any;
-      const project = projectRef.value as any;
-      const archive = archiveRef.value as any;
-      const contact = contactRef.value as any;
-      console.dir(archive.$el);
-      console.log(archive.$el.offsetTop);
-      console.log(archive.$el.getBoundingClientRect().top);
-      homeTop.value = home.$el.offsetTop;
-      projectTop.value = project.$el.offsetTop;
-      archiveTop.value = archive.$el.offsetTop;
-      contactTop.value = contact.$el.offsetTop;
-      init.value = true;
-      debugger;
+      const win = window.document as any;
+      win.fonts.ready
+        .then(function () {
+          console.log("in");
+          const home = homeRef.value as any;
+          const project = projectRef.value as any;
+          const archive = archiveRef.value as any;
+          const contact = contactRef.value as any;
+          console.dir(archive.$el);
+          console.log(archive.$el.offsetTop);
+          console.log(archive.$el.getBoundingClientRect().top);
+          homeTop.value = home.$el.offsetTop;
+          projectTop.value = project.$el.offsetTop;
+          archiveTop.value = archive.$el.offsetTop;
+          contactTop.value = contact.$el.offsetTop;
+          init.value = true;
+        })
+        .catch((err: Error) => {
+          console.log(err);
+          const home = homeRef.value as any;
+          const project = projectRef.value as any;
+          const archive = archiveRef.value as any;
+          const contact = contactRef.value as any;
+          console.dir(archive.$el);
+          console.log(archive.$el.offsetTop);
+          console.log(archive.$el.getBoundingClientRect().top);
+          homeTop.value = home.$el.offsetTop;
+          projectTop.value = project.$el.offsetTop;
+          archiveTop.value = archive.$el.offsetTop;
+          contactTop.value = contact.$el.offsetTop;
+          init.value = true;
+        });
     });
     return {
       homeTop,
@@ -116,6 +137,7 @@ export default defineComponent({
 body {
   width: 100%;
   overflow-x: hidden;
+  background: linear-gradient(#f2f2f2, #434343, #000000);
 }
 body h2 {
   text-transform: uppercase;

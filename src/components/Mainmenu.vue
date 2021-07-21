@@ -144,7 +144,6 @@ export default defineComponent({
           ? move
           : curPos - curStep;
       window.scrollTo(0, movePos);
-      console.log(movePos, curPos);
       roop.value = setTimeout(() => smoothScroll(move, curStep, curSpeed), 1);
     };
     // watchEffect((aa) => {

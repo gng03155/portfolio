@@ -77,7 +77,7 @@ export default defineComponent({
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(177, 159, 161);
+  background: #fafafa;
   border-radius: 10px;
   text-align: center;
 }
@@ -102,7 +102,6 @@ export default defineComponent({
 
 .wrap div.notion {
   position: relative;
-  /* transform: translateX(-500%); */
   left: -400%;
   animation: nt_move 2s forwards ease-out;
 }
