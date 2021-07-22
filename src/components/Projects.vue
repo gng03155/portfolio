@@ -14,18 +14,24 @@
             <ul>
               <li>
                 <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">세계 유명 명화 쇼핑몰 입니다.</p>
                 <p class="f_gmarket">
-                  카페24를 통해 실제 쇼핑몰의 디자인 및 기능을 참고하여 이질감이
-                  느껴지지 않는 진짜같은 프로젝트를 만드는것이 목적이었습니다.
+                  카페24를 통해 실제 사용되는 쇼핑몰의 디자인 및 기능을
+                  참고하였습니다.
                 </p>
                 <p class="f_gmarket">
-                  지금까지 프로젝트는 기존에 존재하는 더미데이터 및 api데이터를
-                  단순히 가져와서 가공하여 사용했다면, 이번 프로젝트는 직접
-                  데이터베이스 구조를 설계했습니다. 이전까지는 데이터 구조에
-                  대해서 중요하게 생각해본적이 없었지만, 이번 프로젝트를 통해
-                  데이터베이스 구조에 따라 프로젝트의 방향성이 정해진다는것을
-                  깨닳았고, 그에 따른 퍼포먼스또한 유기적으로 연결되어
-                  있다는것을 알게되었습니다.
+                  Next.js 와 SWR을 이용한 SSR(서버 사이드 렌더링)
+                  프로젝트입니다.
+                </p>
+                <p class="f_gmarket">
+                  Firebase 서버를 이용해서 백엔드를 구축했고, NoSQL (비관계형
+                  데이터 베이스) 구조를 설계했습니다.
+                </p>
+                <p class="f_gmarket">
+                  Parallax-Scrolling을 직접 구현하였습니다.
+                </p>
+                <p class="f_gmarket">
+                  미디어 쿼리를 이용해 반응형으로 제작되었습니다.
                 </p>
               </li>
               <li>
@@ -69,7 +75,7 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="notion"></i>
-                    <span class="f_gmarket">Notion</span>
+                    <span class="f_gmarket">Issue</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="github"></i>
@@ -104,22 +110,25 @@
               <li>
                 <h4 class="f_gmarket">프로젝트개요</h4>
                 <p class="f_gmarket">
-                  주변 지인에게 부탁을 받아 개발하게 되었습니다. 지금까진
-                  단순하게 공부의 목적으로 개발했다면, 이번엔 타인의 요청으로
-                  인해 개발 하다보니 단순히 기능만 구현하기 보다는 사용자가 좀
-                  더 편리하게 사용할 수 있도록 UI부분도 신경을 많이 썼습니다.
+                  실시간으로 국내 코인 시세 정보를 조회합니다.
+                </p>
+                <p class="f_gmarket">각 코인을 테마별로 분류하였습니다.</p>
+                <p class="f_gmarket">
+                  Upbit에서 Websocket 요청을 통해 실시간 정보를, Binance에서는
+                  Rest API 요청을 통해 실시간 해외 정보를 받아왔습니다.
                 </p>
                 <p class="f_gmarket">
-                  국내 가상화폐 거래소 플랫폼인 Upbit의 코인 정보를 Websocket을
-                  통해 실시간으로 정보를 받아오고 글로벌 플랫폼인 Binance에서
-                  정보를 받아와 현재 환율에 따른 국내와 해외간 시세 차익을
-                  계산하였습니다.
+                  현재 환율에 따른 국내와 해외간 시세 차익을 계산하였습니다.
+                </p>
+                <p class="f_gmarket">
+                  지인에게 요청을 받아 개발하여 사용자가 편리하게 사용 할 수
+                  있도록 UI부분에 신경을 많이 썼습니다.
                 </p>
               </li>
               <li>
                 <h4 class="f_gmarket">주요기능</h4>
                 <p class="f_gmarket">
-                  실시간 코인 시세 정보 , 국내와 해외간 시세 차익
+                  실시간 코인 시세 정보 , 국내와 해외간 시세 차익 , 테마 별 분류
                 </p>
               </li>
               <li>
@@ -147,7 +156,7 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="notion"></i>
-                    <span class="f_gmarket">Notion</span>
+                    <span class="f_gmarket">Issue</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="github"></i>
@@ -177,19 +186,22 @@
               <li>
                 <h4 class="f_gmarket">프로젝트개요</h4>
                 <p class="f_gmarket">
-                  국내 리그오브레전드 전적 조회 사이트인 OP.GG를 통해 데이터
-                  크롤링을 하여 전적정보를 가져옴
+                  국내 리그오브레전드 전적 조회 사이트인 OP.GG 정보를
+                  크롤링했습니다.
                 </p>
                 <p class="f_gmarket">
-                  해당 사이트의 크롤링 권한 정보를 나타내는 robots.txt파일을
-                  확인하여 전체 영역에 대해 허락한것을 확인 후 프로젝트를
-                  진행하였습니다.
+                  사이트의 크롤링 권한 정보를 나타내는 robots.txt파일을 확인 후
+                  작업하였습니다.
+                </p>
+                <p class="f_gmarket">
+                  실시간 전적 조회 업데이트로 인해 크롤링 타임이 길어지는점
+                  양해부탁드립니다.
                 </p>
               </li>
               <li>
                 <h4 class="f_gmarket">주요기능</h4>
                 <p class="f_gmarket">
-                  인게임 내 전적 정보 조회 , 인피니티 스크롤링 구현
+                  실시간 전적 정보 조회 , 인피니티 스크롤링 구현
                 </p>
               </li>
               <li>
@@ -217,7 +229,7 @@
                 <div class="shortcut">
                   <a href="#" target="_blank">
                     <i class="notion"></i>
-                    <span class="f_gmarket">Notion</span>
+                    <span class="f_gmarket">Issue</span>
                   </a>
                   <a href="#" target="_blank">
                     <i class="github"></i>
@@ -254,12 +266,18 @@
                 <p class="f_gmarket">
                   순수 자바스크립트만을 이용해서 개발하였습니다.
                 </p>
+                <p class="f_gmarket">
+                  Slider bar를 직접 구현하여 사용했습니다.
+                </p>
+                <p class="f_gmarket">
+                  Object에서 padding , margin , border , content가 차지하는
+                  영역을 표현하였습니다.
+                </p>
               </li>
               <li>
                 <h4 class="f_gmarket">주요기능</h4>
                 <p class="f_gmarket">
-                  padding,margin 크기에 따른 interactive modelling , 슬라이더
-                  구현
+                  padding,margin,border 영역에 interactive modelling
                 </p>
               </li>
               <li>
@@ -312,6 +330,10 @@
                 <p class="f_gmarket">
                   순수 자바스크립트만을 이용해서 개발하였습니다.
                 </p>
+                <p class="f_gmarket">
+                  requestAnimationFrame을 사용해 부드러운 애니메이션을 구현했고,
+                  각 개체의 position을 이용하여 Trigger를 만들었습니다.
+                </p>
               </li>
               <li>
                 <h4 class="f_gmarket">주요기능</h4>
@@ -349,6 +371,64 @@
       <fieldset>
         <div class="content">
           <h3 class="f_gmarket">DRAG-DROP</h3>
+          <div class="thumbnail">
+            <div class="video_wrap">
+              <video
+                src="../assets/video/drag-drop.mp4"
+                autoplay
+                loop
+                muted
+              ></video>
+            </div>
+            <span class="f_gmarket">미리보기</span>
+          </div>
+          <div class="info">
+            <ul>
+              <li>
+                <h4 class="f_gmarket">프로젝트개요</h4>
+                <p class="f_gmarket">
+                  순수 자바스크립트만을 이용해서 개발하였습니다.
+                </p>
+                <p class="f_gmarket">
+                  직접 이미지를 불러와 편집하고 저장 할 수 있습니다.
+                </p>
+              </li>
+              <li>
+                <h4 class="f_gmarket">주요기능</h4>
+                <p class="f_gmarket">Drag-Drop , CanvasPainting , CanvasSave</p>
+              </li>
+              <li>
+                <h4 class="f_gmarket">SKILL</h4>
+                <div class="skill_wrap">
+                  <div class="skill">
+                    <i class="js"></i>
+                    <span class="f_gmarket">js</span>
+                  </div>
+                  <div class="skill">
+                    <i class="scss"></i>
+                    <span class="f_gmarket">scss</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="shortcut">
+                  <a href="#" target="_blank">
+                    <i class="github"></i>
+                    <span class="f_gmarket">GitHub</span>
+                  </a>
+                  <a href="#" target="_blank">
+                    <i class="web"></i>
+                    <span class="f_gmarket">Website</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="content">
+          <h3 class="f_gmarket">PORTFOLIO</h3>
           <div class="thumbnail">
             <div class="video_wrap">
               <video
@@ -609,6 +689,7 @@ fieldset:nth-child(2n) legend {
 
 .info ul li .skill_wrap {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .info ul li .skill {
@@ -616,8 +697,9 @@ fieldset:nth-child(2n) legend {
   align-items: center;
   border-radius: 5px;
   border: 1px solid #ececec;
-  padding: 5px 2px;
+  padding: 5px 7px;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .info ul li .skill span {
@@ -636,10 +718,11 @@ fieldset:nth-child(2n) legend {
   border: 1px solid #ececec;
   padding: 5px 10px;
   border-radius: 5px;
+  margin-right: 20px;
 }
 
-.info .shortcut a:first-child {
-  margin-right: 20px;
+.info .shortcut a:last-child {
+  margin-right: 0px;
 }
 
 .info .shortcut a span {

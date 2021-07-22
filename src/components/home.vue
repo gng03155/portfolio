@@ -76,8 +76,8 @@ export default defineComponent({
   margin: 40px 0;
 }
 
-.top span {
-  background: linear-gradient(red, yellow);
+/* .top span {
+  background: linear-gradient(red, purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -92,7 +92,7 @@ export default defineComponent({
   background: linear-gradient(blue, purple);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .text_wrap span {
   --animps: running;
@@ -102,12 +102,11 @@ export default defineComponent({
   font-family: "Montserrat", italic;
   top: 20px;
   display: inline;
-  color: red;
 
   font-size: 80px;
-  /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
     0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
-    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4); */
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .anim span {
@@ -174,15 +173,15 @@ export default defineComponent({
 @keyframes bounce {
   50% {
     top: -20px;
-    /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
-      0 50px 25px rgba(0, 0, 0, 0.2); */
+      0 50px 25px rgba(0, 0, 0, 0.2);
   }
   100% {
     top: 20px;
-    /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
-      0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4); */
+      0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
   }
 }
 </style>

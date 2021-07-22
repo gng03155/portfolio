@@ -8,9 +8,7 @@
         </div>
         <div class="desc">
           <p class="f_gmarket">소스코드 저장소 입니다.</p>
-          <p class="f_gmarket">
-            지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.
-          </p>
+          <p class="f_gmarket">제작했던 프로젝트 소스들이 보관되어있습니다.</p>
         </div>
         <div class="link">
           <a href="#">
@@ -25,9 +23,12 @@
           <h3 class="f_gmarket">Notion</h3>
         </div>
         <div class="desc">
-          <p class="f_gmarket">소스코드 저장소 입니다.</p>
           <p class="f_gmarket">
-            지금까지 제작했던 프로젝트 소스들이 보관되어있습니다.
+            공부했던 내용 및 개발 이슈들이 기록되어있습니다.
+          </p>
+          <p class="f_gmarket">
+            공유목적이 아닌 저만의 공부노트이기 때문에 편한 어체를 사용한 점
+            양해부탁드립니다.
           </p>
         </div>
         <div class="link">
@@ -193,7 +194,6 @@ export default defineComponent({
 
 @keyframes gt_move {
   0% {
-    opacity: 0;
   }
   70% {
     left: 0px;
@@ -214,7 +214,6 @@ export default defineComponent({
     left: 10px;
   }
   100% {
-    opacity: 1;
     left: 0;
     /* transform: translateX(-500%); */
   }
@@ -222,7 +221,6 @@ export default defineComponent({
 
 @keyframes nt_move {
   0% {
-    opacity: 0;
   }
   70% {
     left: 0px;
@@ -243,7 +241,6 @@ export default defineComponent({
     left: -10px;
   }
   100% {
-    opacity: 1;
     left: 0;
     /* transform: translateX(500%); */
   }
