@@ -27,7 +27,7 @@
             공부했던 내용 및 개발 이슈들이 기록되어있습니다.
           </p>
           <p class="f_gmarket">
-            공유목적이 아닌 저만의 공부노트이기 때문에 편한 어체를 사용한 점
+            공유목적이 아닌 공부노트이기 때문에 편한 어체를 사용한 점
             양해부탁드립니다.
           </p>
         </div>
@@ -276,10 +276,19 @@ export default defineComponent({
 
 .logo h3 {
   font-size: 20px;
+  margin-left: 5px;
 }
 
 .desc {
   margin: 30px 0;
+}
+
+.desc p {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.desc p:last-child {
+  margin-bottom: 0px;
 }
 
 .link {

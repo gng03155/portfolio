@@ -45,7 +45,7 @@ export default defineComponent({
         animRef.value?.classList.remove("anim");
         animRef.value?.offsetWidth;
         animRef.value?.classList.add("anim");
-      }, 2500);
+      }, 2700);
     });
     return { animRef };
   },
@@ -99,18 +99,23 @@ export default defineComponent({
   position: relative;
   text-transform: uppercase;
   margin-right: 15px;
-  font-family: "Montserrat", italic;
   top: 20px;
   display: inline;
-
   font-size: 80px;
+  /* font-family: "Press Start 2P", cursive; */
+  /* font-family: "Ultra", serif; */
+  /* font-family: "Monoton", cursive; */
+  font-family: "Fredericka the Great", cursive;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
     0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
     0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+
+  /* -webkit-text-stroke: 10px black;
+  text-stroke: 10px black; */
 }
 
 .anim span {
-  animation: bounce 0.6s ease-in-out forwards;
+  animation: bounce 0.8s ease-in-out forwards;
 }
 
 .top span:nth-child(2) {
@@ -172,7 +177,7 @@ export default defineComponent({
 
 @keyframes bounce {
   50% {
-    top: -20px;
+    top: -50px;
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
       0 50px 25px rgba(0, 0, 0, 0.2);

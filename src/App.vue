@@ -19,7 +19,7 @@ import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
 import Archive from "./components/archiving.vue";
 import Contact from "./components/contact.vue";
-import Footer from "./components/footer.vue";
+import Footer from "./components/Footer.vue";
 
 export default defineComponent({
   name: "App",
@@ -137,7 +137,7 @@ export default defineComponent({
 body {
   width: 100%;
   overflow-x: hidden;
-  background: linear-gradient(#f2f2f2, #434343, #000000);
+  background: #204969;
 }
 body h2 {
   text-transform: uppercase;

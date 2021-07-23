@@ -495,26 +495,34 @@ export default defineComponent({
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .project_wrap {
-  padding: 100px 0;
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 fieldset {
   width: 1280px;
-  margin: 0 auto;
   height: 100%;
   margin-bottom: 50px;
-  border: 3px solid transparent;
+
+  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+    rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
+    rgb(0 0 0 / 9%) 0px -3px 5px;
+
+  /* background: #fff; */
+
+  /* border: 3px solid transparent; */
   /* background-image: linear-gradient(#fafafa, #fafafa),
     radial-gradient(#e6dada, #274046);
       radial-gradient(#fbfcb9be, #ffcdf3aa, #65d3ffaa); */
-  background-origin: border-box;
+  /* background-origin: border-box;
   background-clip: content-box, border-box;
-  background-size: 200% 200%;
-  border-radius: 20px;
-  animation: border_gradient 2s linear infinite;
+  background-size: 200% 200%; */
+  /* border-radius: 20px;
+  animation: border_gradient 2s linear infinite; */
 }
 
-fieldset:nth-child(1) {
+/* fieldset:nth-child(1) {
   background-image: linear-gradient(#ffffff, #ffffff),
     radial-gradient(#f5f5f1, #e50914);
 }
@@ -541,6 +549,13 @@ fieldset:nth-child(6) {
 fieldset:nth-child(7) {
   background-image: linear-gradient(#ffffff, #ffffff),
     radial-gradient(#c797eb, #f0ecfc);
+} */
+
+fieldset:nth-child(2n-1) {
+  align-self: flex-start;
+}
+fieldset:nth-child(2n) {
+  align-self: flex-end;
 }
 
 fieldset:nth-child(1) h3 {
@@ -605,7 +620,7 @@ fieldset:nth-child(2n) legend {
 
 .content {
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
