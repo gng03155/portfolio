@@ -505,9 +505,11 @@ fieldset {
   height: 100%;
   margin-bottom: 50px;
 
-  box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  /* box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px,
     rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px,
-    rgb(0 0 0 / 9%) 0px -3px 5px;
+    rgb(0 0 0 / 9%) 0px -3px 5px; */
 
   /* background: #fff; */
 
@@ -715,16 +717,21 @@ fieldset:nth-child(2n) legend {
   padding: 5px 7px;
   margin-right: 5px;
   margin-bottom: 5px;
+  background: #eaeaea;
+  color: #333;
 }
 
 .info ul li .skill span {
   display: inline-block;
   position: relative;
+  color: inherit;
 }
 
 .info .shortcut {
   display: flex;
   justify-content: center;
+  background: #eaeaea;
+  color: #333;
 }
 
 .info .shortcut a {
@@ -734,6 +741,7 @@ fieldset:nth-child(2n) legend {
   padding: 5px 10px;
   border-radius: 5px;
   margin-right: 20px;
+  color: inherit;
 }
 
 .info .shortcut a:last-child {
@@ -742,6 +750,7 @@ fieldset:nth-child(2n) legend {
 
 .info .shortcut a span {
   font-size: 20px;
+  color: inherit;
 }
 
 i {

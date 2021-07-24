@@ -11,7 +11,7 @@
           <span class="f_gmarket">010 6480 2679</span>
         </li>
         <li>
-          <span>© 2021. Choi Deok Gyeong. All rights reserved.</span>
+          <span>© 2021. Won Jong Seon. All rights reserved.</span>
         </li>
       </ul>
     </footer>
@@ -27,19 +27,13 @@ export default defineComponent({
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#home {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-}
-
 footer {
   width: 100%;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #333;
 }
 
 .content {

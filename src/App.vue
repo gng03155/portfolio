@@ -1,12 +1,13 @@
 <template>
   <div class="app">
-    <Mainmenu
+    <Menu
       v-bind:numbers="[homeTop, projectTop, archiveTop, contactTop]"
       v-bind:curArea="curArea"
     />
+    <BG />
     <Home ref="homeRef" />
     <Projects ref="projectRef" />
-    <Archive ref="archiveRef" />
+    <Archive ref="archiveRef" v-bind:isIn="isArchive" />
     <Contact ref="contactRef" />
     <Footer />
   </div>
@@ -14,7 +15,8 @@
 
 <script lang="ts">
 import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
-import Mainmenu from "./components/Mainmenu.vue";
+import Menu from "./components/Menu.vue";
+import BG from "./components/BG.vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
 import Archive from "./components/archiving.vue";
@@ -25,10 +27,11 @@ export default defineComponent({
   name: "App",
   components: {
     Home,
+    BG,
     Projects,
     Archive,
     Contact,
-    Mainmenu,
+    Menu,
     Footer,
   },
   setup() {
@@ -42,6 +45,9 @@ export default defineComponent({
     let archiveTop = ref(0);
     let contactTop = ref(0);
     let curArea = ref("home");
+
+    let isArchive = ref(false);
+
     const handleScroll = function () {
       const scrollTop = Math.ceil(window.top.scrollY);
       const windowHeight = window.innerHeight;
@@ -67,6 +73,7 @@ export default defineComponent({
       // }
       if (curScroll > archiveTop.value) {
         archive.$el.firstElementChild.classList.add("wrap");
+        isArchive.value = true;
       } else {
         archive.$el.firstElementChild.classList.remove("wrap");
       }
@@ -92,9 +99,6 @@ export default defineComponent({
           const project = projectRef.value as any;
           const archive = archiveRef.value as any;
           const contact = contactRef.value as any;
-          console.dir(archive.$el);
-          console.log(archive.$el.offsetTop);
-          console.log(archive.$el.getBoundingClientRect().top);
           homeTop.value = home.$el.offsetTop;
           projectTop.value = project.$el.offsetTop;
           archiveTop.value = archive.$el.offsetTop;
@@ -107,9 +111,6 @@ export default defineComponent({
           const project = projectRef.value as any;
           const archive = archiveRef.value as any;
           const contact = contactRef.value as any;
-          console.dir(archive.$el);
-          console.log(archive.$el.offsetTop);
-          console.log(archive.$el.getBoundingClientRect().top);
           homeTop.value = home.$el.offsetTop;
           projectTop.value = project.$el.offsetTop;
           archiveTop.value = archive.$el.offsetTop;
@@ -127,6 +128,7 @@ export default defineComponent({
       archiveRef,
       contactRef,
       curArea,
+      isArchive,
       handleScroll,
     };
   },
@@ -137,7 +139,15 @@ export default defineComponent({
 body {
   width: 100%;
   overflow-x: hidden;
-  background: #204969;
+  /* background: #d0d0d0; */
+  /* background-color: hsl(0, 0%, 18%);
+  background-size: 3px 3px;
+  background-image: linear-gradient(
+      0deg,
+      hsla(0, 0%, 0%, 0) 0,
+      hsla(0, 0%, 10%, 1) 3px
+    ),
+    linear-gradient(90deg, hsla(0, 0%, 0%, 0) 0, hsla(0, 0%, 10%, 1) 5px); */
 }
 body h2 {
   text-transform: uppercase;

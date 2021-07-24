@@ -43,10 +43,24 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, watchEffect } from "vue";
 
 export default defineComponent({
   name: "Archive",
+  props: {
+    isIn: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
+  },
+  setup(props) {
+    watchEffect(() => {
+      if (props.isIn) {
+        console.log("들어옴");
+      }
+    });
+  },
 });
 </script>
 
@@ -277,15 +291,18 @@ export default defineComponent({
 .logo h3 {
   font-size: 20px;
   margin-left: 5px;
+  color: inherit;
 }
 
 .desc {
   margin: 30px 0;
+  color: inherit;
 }
 
 .desc p {
   font-size: 16px;
   margin-bottom: 5px;
+  color: inherit;
 }
 .desc p:last-child {
   margin-bottom: 0px;
@@ -306,6 +323,7 @@ export default defineComponent({
 
 .link span {
   font-size: 16px;
+  color: inherit;
 }
 
 i.github {

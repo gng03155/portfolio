@@ -1,5 +1,5 @@
 <template>
-  <div id="mainmenu">
+  <div id="menu">
     <ul>
       <li>
         <a
@@ -32,7 +32,7 @@
 import { ref, defineComponent, onMounted, watchEffect, watch } from "vue";
 
 export default defineComponent({
-  name: "Mainmenu",
+  name: "Menu",
   props: {
     numbers: {
       type: Array,
@@ -52,11 +52,6 @@ export default defineComponent({
     const conRef = ref<null | HTMLDivElement>(null);
     const roop = ref(0);
     const onClickMenu = (name: string) => {
-      const home = homeRef.value as HTMLDivElement;
-      const pro = proRef.value as HTMLDivElement;
-      const ar = arRef.value as HTMLDivElement;
-      const con = conRef.value as HTMLDivElement;
-
       const step = 20;
       const between = 1;
       const speed = 0.1;
@@ -207,7 +202,7 @@ export default defineComponent({
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#mainmenu {
+#menu {
   position: fixed;
   top: 0;
   left: 0;
