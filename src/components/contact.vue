@@ -1,6 +1,6 @@
 <template>
   <div id="contact">
-    <div>
+    <div class="content">
       <div class="card" ref="cardRef">
         <div class="wall" ref="wallRef"></div>
         <div class="front" ref="frontRef"></div>
@@ -130,7 +130,7 @@ export default defineComponent({
   width: 100%;
   height: 100vh;
 }
-.wrap {
+.content {
   width: 100%;
   height: 100%;
   display: flex;
@@ -188,5 +188,24 @@ export default defineComponent({
   background-size: 100% 100%;
   transform: perspective(800px) rotateY(180deg);
   z-index: 10;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 600px;
+    height: 360px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 480px;
+    height: 360px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+    width: 320px;
+    height: 240px;
+  }
 }
 </style>

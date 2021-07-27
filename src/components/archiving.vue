@@ -1,6 +1,6 @@
 <template>
   <div id="archive">
-    <div>
+    <div class="content">
       <div class="git">
         <div class="logo">
           <i class="github"></i>
@@ -27,7 +27,7 @@
             공부했던 내용 및 개발 이슈들이 기록되어있습니다.
           </p>
           <p class="f_gmarket">
-            공유목적이 아닌 공부노트이기 때문에 편한 어체를 사용한 점
+            공유목적이 아닌 공부노트이기 때문에 평어체를 사용한 점
             양해부탁드립니다.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default defineComponent({
   align-items: center;
 }
 
-.wrap {
+.content {
   width: 800px;
   height: 300px;
   display: flex;
@@ -83,7 +83,7 @@ export default defineComponent({
   animation: fade 1s forwards;
 }
 
-.wrap > div {
+.content > div {
   position: relative;
   width: 320px;
   height: 100%;
@@ -95,115 +95,24 @@ export default defineComponent({
   background: #fafafa;
   border-radius: 10px;
   text-align: center;
+  color: #333;
+}
+
+.content div.git {
+  position: relative;
+  left: 400%;
+}
+
+.content div.notion {
+  position: relative;
+  left: -400%;
 }
 
 .wrap div.git {
-  position: relative;
-  /* transform: translateX(500%); */
-  left: 400%;
   animation: gt_move 2s forwards ease-out;
 }
-
-/* .wrap div.git:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: -100%;
-  background-color: rgb(29, 29, 29);
-  animation: gt_virtual_move 3s 2s forwards;
-} */
-
 .wrap div.notion {
-  position: relative;
-  left: -400%;
   animation: nt_move 2s forwards ease-out;
-}
-/* 
-.wrap div.notion:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: rgb(29, 29, 29);
-  animation: nt_virtual_move 3s 2s forwards;
-} */
-
-/* .wrap div.content {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  animation: con_fade 1s 8s linear forwards;
-  z-index: 10;
-}
-
-.wrap div.content2 {
-  width: 100%;
-  height: 100%;
-  padding: 50px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  animation: con_fade2 1s 8s linear forwards;
-  z-index: 10;
-} */
-
-/* @keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-} */
-
-@keyframes con_fade {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-    top: 0;
-  }
-  80% {
-    opacity: 0;
-    top: -100%;
-  }
-  100% {
-    opacity: 1;
-    top: -100%;
-  }
-}
-
-@keyframes con_fade2 {
-  0% {
-    opacity: 1;
-  }
-  20% {
-    opacity: 0;
-    top: 0;
-    /* transform: translateY(0px); */
-  }
-  80% {
-    opacity: 0;
-    top: 100%;
-    /* transform: translateY(200px); */
-  }
-  100% {
-    opacity: 1;
-    top: 100%;
-    /* transform: translateY(200px); */
-  }
 }
 
 @keyframes gt_move {
@@ -229,7 +138,6 @@ export default defineComponent({
   }
   100% {
     left: 0;
-    /* transform: translateX(-500%); */
   }
 }
 
@@ -256,29 +164,6 @@ export default defineComponent({
   }
   100% {
     left: 0;
-    /* transform: translateX(500%); */
-  }
-}
-
-@keyframes gt_virtual_move {
-  0% {
-    right: -100%;
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    right: -500%;
-  }
-}
-
-@keyframes nt_virtual_move {
-  0% {
-    left: -100%;
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    left: -500%;
   }
 }
 
@@ -286,6 +171,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   align-items: center;
+  color: inherit;
 }
 
 .logo h3 {
@@ -311,14 +197,16 @@ export default defineComponent({
 .link {
   display: flex;
   justify-content: center;
+  color: inherit;
 }
 
 .link a {
   display: flex;
   align-items: center;
   padding: 5px;
-  border: 1px solid #ececec;
+  border: 1px solid #333;
   border-radius: 5px;
+  color: inherit;
 }
 
 .link span {
@@ -348,5 +236,62 @@ i.shortcut {
   height: 25px;
   background: url("../assets/imgs/shortcut.png") no-repeat;
   background-size: contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrap {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrap > div:first-child {
+    margin-bottom: 50px;
+  }
+  .wrap > div {
+    width: 320px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrap > div {
+    width: 300px;
+    height: 280px;
+  }
+  .logo h3 {
+    font-size: 18px;
+  }
+  .desc p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: inherit;
+  }
+  .link span {
+    font-size: 14px;
+    color: inherit;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrap > div {
+    width: 280px;
+    height: 260px;
+  }
+
+  .logo h3 {
+    font-size: 16px;
+    margin-left: 5px;
+    color: inherit;
+  }
+  .desc {
+    margin: 20px 0;
+    color: inherit;
+  }
+
+  .desc p {
+    font-size: 12px;
+  }
+  .link span {
+    font-size: 12px;
+  }
 }
 </style>

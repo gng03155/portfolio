@@ -68,6 +68,7 @@ export default defineComponent({
 
 .text_wrap div {
   position: relative;
+  text-align: center;
 }
 
 .text_wrap .middle {
@@ -113,7 +114,9 @@ export default defineComponent({
   /* -webkit-text-stroke: 10px black;
   text-stroke: 10px black; */
 }
-
+.text_wrap span:last-child {
+  margin-right: 0;
+}
 .anim span {
   animation: bounce 0.8s ease-in-out forwards;
 }
@@ -187,6 +190,66 @@ export default defineComponent({
     text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
       0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent,
       0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes mobile_bounce {
+  50% {
+    top: -25px;
+  }
+  100% {
+    top: 20px;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .text_wrap {
+    padding-bottom: 60px;
+  }
+  .text_wrap .middle {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  .text_wrap span {
+    margin-right: 15px;
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .text_wrap {
+    padding-bottom: 60px;
+  }
+  .text_wrap .middle {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  .text_wrap span {
+    margin-right: 15px;
+    font-size: 40px;
+    text-shadow: 3px 2px 0 #7a7a7a;
+  }
+  .anim span {
+    animation: mobile_bounce 0.8s ease-in-out forwards;
+  }
+}
+@media screen and (max-width: 480px) {
+  .text_wrap {
+    padding-bottom: 60px;
+  }
+  .text_wrap .middle {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+  }
+  .text_wrap span {
+    margin-right: 15px;
+    font-size: 20px;
+    text-shadow: 2px 1px 0 #7a7a7a;
+  }
+  .anim span {
+    animation: mobile_bounce 0.8s ease-in-out forwards;
   }
 }
 </style>

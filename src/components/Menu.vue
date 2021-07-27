@@ -233,4 +233,26 @@ a {
 a.active {
   font-weight: 700;
 }
+
+@media screen and (max-width: 1024px) {
+  a {
+    font-size: 18px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  a {
+    font-size: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  a {
+    font-size: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
 </style>

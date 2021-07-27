@@ -501,7 +501,7 @@ export default defineComponent({
 }
 
 fieldset {
-  width: 1280px;
+  width: 1260px;
   height: 100%;
   margin-bottom: 50px;
 
@@ -730,18 +730,17 @@ fieldset:nth-child(2n) legend {
 .info .shortcut {
   display: flex;
   justify-content: center;
-  background: #eaeaea;
-  color: #333;
 }
 
 .info .shortcut a {
   display: flex;
   align-items: center;
+  background: #eaeaea;
+  color: #333;
   border: 1px solid #ececec;
   padding: 5px 10px;
   border-radius: 5px;
   margin-right: 20px;
-  color: inherit;
 }
 
 .info .shortcut a:last-child {
@@ -859,5 +858,90 @@ i.pptr {
   height: 20px;
   background: url("../assets/imgs/pptr.png") no-repeat;
   background-size: 100% 100%;
+}
+/* 반응형 작업 */
+@media screen and (max-width: 1460px) {
+  .project_wrap {
+    padding: 100px 100px;
+  }
+  fieldset {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .thumbnail {
+    width: 60%;
+    margin-right: 0;
+  }
+  .info {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .thumbnail {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .project_wrap {
+    padding: 100px 50px;
+  }
+  .thumbnail {
+    width: 100%;
+    padding: 10px 10px;
+  }
+  .info .shortcut a span {
+    font-size: 14px;
+  }
+  .info .shortcut a i {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .project_wrap {
+    padding: 100px 10px;
+  }
+
+  .content h3 {
+    font-size: 24px;
+  }
+  .info ul li h4 {
+    font-size: 16px;
+    line-height: 40px;
+  }
+  .info ul li p {
+    font-size: 10px;
+    padding-left: 20px;
+    line-height: 1.4;
+  }
+
+  .info ul li .skill {
+    padding: 5px 7px;
+    margin-right: 5px;
+  }
+  .info ul li .skill i {
+    width: 15px;
+    height: 15px;
+  }
+  .info ul li .skill span {
+    font-size: 10px;
+  }
+
+  .info .shortcut a {
+    margin-right: 5px;
+  }
+  .info .shortcut a span {
+    font-size: 12px;
+  }
+  .info .shortcut a i {
+    width: 15px;
+    height: 15px;
+  }
 }
 </style>
