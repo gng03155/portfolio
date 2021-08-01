@@ -65,10 +65,6 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
-          // home.classList.add("active");
-          // pro.classList.remove("active");
-          // ar.classList.remove("active");
-          // con.classList.remove("active");
           break;
         }
         case "projects": {
@@ -79,10 +75,6 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
-          // home.classList.remove("active");
-          // pro.classList.add("active");
-          // ar.classList.remove("active");
-          // con.classList.remove("active");
           break;
         }
         case "archive": {
@@ -93,10 +85,6 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
-          // home.classList.remove("active");
-          // pro.classList.remove("active");
-          // ar.classList.add("active");
-          // con.classList.remove("active");
           break;
         }
         case "contact": {
@@ -107,10 +95,6 @@ export default defineComponent({
             () => smoothScroll(move, step, speed),
             between
           );
-          // home.classList.remove("active");
-          // pro.classList.remove("active");
-          // ar.classList.remove("active");
-          // con.classList.add("active");
           break;
         }
         default:
@@ -123,7 +107,6 @@ export default defineComponent({
       }
     };
     const smoothScroll = (move: number, step: number, speed: number) => {
-      // const curPos = window.top.scrollY;
       const curPos = Math.ceil(window.top.scrollY);
       if (curPos === move) {
         return;
@@ -141,15 +124,9 @@ export default defineComponent({
       window.scrollTo(0, movePos);
       roop.value = setTimeout(() => smoothScroll(move, curStep, curSpeed), 1);
     };
-    // watchEffect((aa) => {
-    //   console.log(aa);
-    // });
     watch(
       () => props.curArea,
       (newProps: string, prevProps: string) => {
-        console.log(
-          `change Props : curArea , prev : ${prevProps} , new : ${newProps}`
-        );
         const home = homeRef.value as HTMLDivElement;
         const pro = proRef.value as HTMLDivElement;
         const ar = arRef.value as HTMLDivElement;

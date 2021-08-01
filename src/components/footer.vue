@@ -3,6 +3,15 @@
     <footer>
       <ul class="content">
         <li>
+          <i class="fas fa-file-pdf"></i>
+          <a
+            href="https://drive.google.com/file/d/1d38uoX-A_CDurQhbwY3uUQdlFiuXA2Yk/view?usp=sharing"
+            target="_blank"
+          >
+            <span class="f_gmarket">Resume</span>
+          </a>
+        </li>
+        <li>
           <i class="far fa-envelope"></i>
           <span class="f_gmarket">gng03155@gmail.com</span>
         </li>
@@ -49,11 +58,25 @@ footer {
 .content li:last-child {
   margin-bottom: 0;
 }
+
+.content li:nth-child(2) span {
+  padding-top: 0;
+}
+
+ul.content a {
+  display: block;
+}
+
+ul.content a:hover span {
+  color: lightcoral;
+}
+
 ul.content span {
   font-size: 16px;
+  display: inline-block;
 }
 ul.content i {
-  font-size: 20px;
+  font-size: 25px;
   margin-right: 10px;
 }
 </style>

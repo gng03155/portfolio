@@ -19,8 +19,8 @@ import Menu from "./components/Menu.vue";
 import BG from "./components/BG.vue";
 import Home from "./components/home.vue";
 import Projects from "./components/Projects.vue";
-import Archive from "./components/archiving.vue";
-import Contact from "./components/contact.vue";
+import Archive from "./components/Archive.vue";
+import Contact from "./components/Contact.vue";
 import Footer from "./components/Footer.vue";
 
 export default defineComponent({
@@ -67,10 +67,6 @@ export default defineComponent({
         curArea.value = "contact";
       }
 
-      // if (curScroll >= homeTop.value) {
-      // }
-      // if (curScroll >= projectTop.value) {
-      // }
       if (curScroll > archiveTop.value) {
         archive.$el.firstElementChild.classList.add("wrap");
         isArchive.value = true;
@@ -139,15 +135,6 @@ export default defineComponent({
 body {
   width: 100%;
   overflow-x: hidden;
-  /* background: #d0d0d0; */
-  /* background-color: hsl(0, 0%, 18%);
-  background-size: 3px 3px;
-  background-image: linear-gradient(
-      0deg,
-      hsla(0, 0%, 0%, 0) 0,
-      hsla(0, 0%, 10%, 1) 3px
-    ),
-    linear-gradient(90deg, hsla(0, 0%, 0%, 0) 0, hsla(0, 0%, 10%, 1) 5px); */
 }
 body h2 {
   text-transform: uppercase;

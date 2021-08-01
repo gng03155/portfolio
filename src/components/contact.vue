@@ -11,7 +11,13 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent, onBeforeMount, onMounted } from "vue";
+import { ref, defineComponent, onMounted } from "vue";
+
+export interface newMouseEvent extends MouseEvent {
+  sourceCapabilities: {
+    firesTouchEvents: boolean;
+  };
+}
 
 export default defineComponent({
   name: "Contact",
@@ -35,7 +41,13 @@ export default defineComponent({
       console.log(angle);
       return angle;
     };
-    const handleMouseOver = () => {
+    const handleMouseOver = (e: newMouseEvent | TouchEvent) => {
+      if (e instanceof MouseEvent) {
+        const isTouch = e.sourceCapabilities.firesTouchEvents;
+        if (isTouch) {
+          return;
+        }
+      }
       if (moving.value) {
         return;
       }
@@ -52,64 +64,13 @@ export default defineComponent({
       setTimeout(() => {
         moving.value = false;
       }, 1000);
-      // console.log("over");
-      // const frontTrans = window.getComputedStyle(front).transform;
-      // const backTrans = window.getComputedStyle(back).transform;
-      // let frontAngle = 0;
-      // if (frontTrans !== "none") {
-      //   frontAngle = calcDeg(frontTrans);
-      // }
-      // const backAngle = calcDeg(backTrans);
-      // console.log("front" + (frontAngle + 180));
-      // console.log("back" + (backAngle + 180));
-      // front.style.transform = `perspective(500px) rotateY(${
-      //   Number(frontAngle) + 180
-      // }deg)`;
-      // back.style.transform = `perspective(500px) rotateY(${
-      //   Number(backAngle) + 180
-      // }deg)`;
-    };
-    const handleMouseOut = () => {
-      if (moving.value) {
-        return;
-      }
-      const front = frontRef.value as any;
-      const back = backRef.value as any;
-      front.style.transform = `perspective(800px) rotateY(${
-        180 * cnt.value
-      }deg)`;
-      back.style.transform = `perspective(800px) rotateY(${
-        180 * (cnt.value + 1)
-      }deg)`;
-      cnt.value = cnt.value + 1;
-      moving.value = true;
-      setTimeout(() => {
-        moving.value = false;
-      }, 1000);
-      // console.log("out");
-      // const front = frontRef.value as any;
-      // const back = backRef.value as any;
-      // const frontTrans = window.getComputedStyle(front).transform;
-      // const backTrans = window.getComputedStyle(back).transform;
-      // let frontAngle = 0;
-      // if (frontTrans !== "none") {
-      //   frontAngle = calcDeg(frontTrans);
-      // }
-      // const backAngle = calcDeg(backTrans);
-      // console.log("front" + (frontAngle + 180));
-      // console.log("back" + (backAngle + 180));
-      // front.style.transform = `perspective(500px) rotateY(${
-      //   Number(frontAngle) + Number(180)
-      // }deg)`;
-      // back.style.transform = `perspective(500px) rotateY(${
-      //   Number(backAngle) + Number(180)
-      // }deg)`;
     };
     onMounted(() => {
       const card = cardRef.value as any;
       const wall = wallRef.value as any;
       wall.addEventListener("mouseover", handleMouseOver);
-      wall.addEventListener("mouseout", handleMouseOut);
+      wall.addEventListener("mouseout", handleMouseOver);
+      wall.addEventListener("touchend", handleMouseOver);
     });
     return {
       cardRef,
@@ -118,7 +79,6 @@ export default defineComponent({
       wallRef,
       calcDeg,
       handleMouseOver,
-      handleMouseOut,
     };
   },
 });
@@ -134,8 +94,19 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.test img {
+  width: 400px;
+  height: 300px;
+  display: block;
+  /* image-rendering: -moz-crisp-edges; 
+  image-rendering: -o-crisp-edges; 
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor; IE (non-standard property) */
 }
 
 .wrap .card {
@@ -176,7 +147,7 @@ export default defineComponent({
 }
 
 .front {
-  background: url("../assets/imgs/front.png") no-repeat;
+  background: url("../assets/imgs/dark_front.png") no-repeat;
   background-size: 100% 100%;
   transform: perspective(800px) rotateY(0deg);
   transform-origin: center;
@@ -184,7 +155,7 @@ export default defineComponent({
 }
 
 .back {
-  background: url("../assets/imgs/back.png") no-repeat;
+  background: url("../assets/imgs/dark_back.png") no-repeat;
   background-size: 100% 100%;
   transform: perspective(800px) rotateY(180deg);
   z-index: 10;
